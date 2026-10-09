@@ -1,0 +1,77 @@
+# toolchain record 2026-10-09T14:27:47Z
+== env (pre-build)
+=== env 2026-10-09T13:49:41Z on the-mac-studio
+rustc 1.94.0-nightly (1107bbac4 2025-12-26)
+cargo 1.94.0-nightly (3861f60f6 2025-12-19)
+cmake version 4.4.4
+uv 0.12.3 (507230998 2026-08-07 aarch64-apple-darwin)
+Xcode 27.0
+
+== uzu
+uzu 0.6.1 commit: 8d01581474760bd1fc7f4a547ff1d02f7dada437
+cli 0.6.1
+
+== llama.cpp
+llama.cpp commit: b29c606e28a01b1bc8c1351026a0fa6e616bf6c4
+-- llama.cpp version: 0.4.1-dev
+
+== python/mlx
+mlx 0.32.3 | mlx-lm 0.32.0
+Python 3.12.11
+
+== driver log
+=== round 1 14:17:46
+  mlx 0.8B ACCEPTED (round 1)
+  mlx 4B ACCEPTED (round 1)
+  llamacpp 0.8B unstable (round 1, attempt archived)
+  llamacpp 4B ACCEPTED (round 1)
+cp: results/uzu-0.8B.json: No such file or directory
+  uzu 0.8B unstable (round 1, attempt archived)
+cp: results/uzu-4B.json: No such file or directory
+  uzu 4B unstable (round 1, attempt archived)
+=== round 2 14:20:05
+  llamacpp 0.8B unstable (round 2, attempt archived)
+cp: results/uzu-0.8B.json: No such file or directory
+  uzu 0.8B unstable (round 2, attempt archived)
+cp: results/uzu-4B.json: No such file or directory
+  uzu 4B unstable (round 2, attempt archived)
+=== round 3 14:20:30
+  llamacpp 0.8B unstable (round 3, attempt archived)
+cp: results/uzu-0.8B.json: No such file or directory
+  uzu 0.8B unstable (round 3, attempt archived)
+cp: results/uzu-4B.json: No such file or directory
+  uzu 4B unstable (round 3, attempt archived)
+=== round 4 14:20:54
+  llamacpp 0.8B unstable (round 4, attempt archived)
+cp: results/uzu-0.8B.json: No such file or directory
+  uzu 0.8B unstable (round 4, attempt archived)
+cp: results/uzu-4B.json: No such file or directory
+  uzu 4B unstable (round 4, attempt archived)
+=== round 5 14:21:19
+  llamacpp 0.8B unstable (round 5, attempt archived)
+cp: results/uzu-0.8B.json: No such file or directory
+  uzu 0.8B unstable (round 5, attempt archived)
+cp: results/uzu-4B.json: No such file or directory
+  uzu 4B unstable (round 5, attempt archived)
+=== round 6 14:21:42
+  llamacpp 0.8B unstable (round 6, attempt archived)
+cp: results/uzu-0.8B.json: No such file or directory
+  uzu 0.8B unstable (round 6, attempt archived)
+cp: results/uzu-4B.json: No such file or directory
+  uzu 4B unstable (round 6, attempt archived)
+results/accepted-llamacpp-4B.json
+results/accepted-mlx-0.8B.json
+results/accepted-mlx-4B.json
+=== round 1 14:25:03
+  uzu 0.8B unstable (round 1, attempt archived)
+  uzu 4B ACCEPTED (round 1)
+=== round 2 14:26:26
+  uzu 0.8B ACCEPTED (round 2)
+=== round 3 14:26:51
+all accepted after round 3
+results/accepted-llamacpp-0.8B.json
+results/accepted-llamacpp-4B.json
+results/accepted-mlx-0.8B.json
+results/accepted-mlx-4B.json
+results/accepted-uzu-0.8B.json
+results/accepted-uzu-4B.json

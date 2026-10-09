@@ -1,0 +1,36 @@
+{
+  "Qwen3.5-0.8B-Q4_K_S": [
+    {
+      "run": 0,
+      "ttft_s": 0.3704,
+      "prompt_tokens": 1357,
+      "output_tokens": 128,
+      "prefill_tps": 3768.17,
+      "decode_tps": 128.31
+    },
+    {
+      "run": 1,
+      "ttft_s": 0.725,
+      "prompt_tokens": 1357,
+      "output_tokens": 128,
+      "prefill_tps": 1906.62,
+      "decode_tps": 121.78
+    },
+    {
+      "run": 2,
+      "ttft_s": 0.3676,
+      "prompt_tokens": 1357,
+      "output_tokens": 128,
+      "prefill_tps": 3869.74,
+      "decode_tps": 128.15
+    },
+    {
+      "run": 3,
+      "ttft_s": 0.6227,
+      "prompt_tokens": 1357,
+      "output_tokens": 128,
+      "prefill_tps": 2224.37,
+      "decode_tps": 125.93
+    }
+  ]
+}

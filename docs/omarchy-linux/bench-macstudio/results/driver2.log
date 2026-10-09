@@ -1,0 +1,13 @@
+=== round 1 14:25:03
+  uzu 0.8B unstable (round 1, attempt archived)
+  uzu 4B ACCEPTED (round 1)
+=== round 2 14:26:26
+  uzu 0.8B ACCEPTED (round 2)
+=== round 3 14:26:51
+all accepted after round 3
+results/accepted-llamacpp-0.8B.json
+results/accepted-llamacpp-4B.json
+results/accepted-mlx-0.8B.json
+results/accepted-mlx-4B.json
+results/accepted-uzu-0.8B.json
+results/accepted-uzu-4B.json

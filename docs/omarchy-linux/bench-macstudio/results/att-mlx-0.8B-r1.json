@@ -1,0 +1,36 @@
+{
+  "mlx-community/Qwen3.5-0.8B-4bit": [
+    {
+      "run": 0,
+      "prompt_tokens": 1357,
+      "output_tokens": 128,
+      "ttft_s": 5.6205,
+      "prefill_tps": 241.44,
+      "decode_tps": 34.32
+    },
+    {
+      "run": 1,
+      "prompt_tokens": 1357,
+      "output_tokens": 128,
+      "ttft_s": 1.1539,
+      "prefill_tps": 1176.0,
+      "decode_tps": 139.05
+    },
+    {
+      "run": 2,
+      "prompt_tokens": 1357,
+      "output_tokens": 128,
+      "ttft_s": 1.1827,
+      "prefill_tps": 1147.33,
+      "decode_tps": 131.95
+    },
+    {
+      "run": 3,
+      "prompt_tokens": 1357,
+      "output_tokens": 128,
+      "ttft_s": 1.0548,
+      "prefill_tps": 1286.46,
+      "decode_tps": 140.96
+    }
+  ]
+}

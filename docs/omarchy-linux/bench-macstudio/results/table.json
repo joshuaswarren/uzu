@@ -1,0 +1,86 @@
+{
+  "table": [
+    "| Model | Engine | Input tok | Prefill tok/s | Decode tok/s | TTFT ms | Pub. M1 16GB prefill | Pub. M1 16GB decode |",
+    "|---|---|---|---|---|---|---|---|",
+    "| Qwen3.5 0.8B | uzu | 1357 | 2240 \u00b1 293 | 150.1 \u00b1 2.3 | 613 \u00b1 87 | 895 | 98.3 |",
+    "| Qwen3.5 0.8B | mlx | 1357 | 1203 \u00b1 73 | 137.3 \u00b1 4.7 | 1130 \u00b1 67 | 928 | 79.4 |",
+    "| Qwen3.5 0.8B | llama.cpp | 1357 | 2667 \u00b1 1054 | 125.3 \u00b1 3.2 | 572 \u00b1 184 | 1089 | 72.2 |",
+    "| Qwen3.5 4B | uzu | 1357 | 387 \u00b1 41 | 43.1 \u00b1 0.8 | 3535 \u00b1 361 | 160 | 21.2 |",
+    "| Qwen3.5 4B | mlx | 1357 | 239 \u00b1 31 | 38.5 \u00b1 0.2 | 5753 \u00b1 806 | 169 | 20.4 |",
+    "| Qwen3.5 4B | llama.cpp | 1357 | 256 \u00b1 29 | 24.4 \u00b1 0.6 | 5351 \u00b1 656 | 197 | 18.1 |"
+  ],
+  "verdicts": {
+    "0.8B/prefill": {
+      "measured": {
+        "uzu": 2240.3,
+        "mlx": 1203.3,
+        "llama.cpp": 2666.9
+      },
+      "published_m1": {
+        "uzu": 895.0,
+        "mlx": 928.2,
+        "llama.cpp": 1089.2
+      },
+      "measured_winner": "llama.cpp",
+      "published_m1_winner": "llama.cpp",
+      "uzu_vs_mlx": 1.86,
+      "pub_m1_uza_vs_mlx": 0.96,
+      "uzu_vs_llama": 0.84,
+      "pub_m1_uzu_vs_llama": 0.82
+    },
+    "0.8B/decode": {
+      "measured": {
+        "uzu": 150.1,
+        "mlx": 137.3,
+        "llama.cpp": 125.3
+      },
+      "published_m1": {
+        "uzu": 98.3,
+        "mlx": 79.4,
+        "llama.cpp": 72.2
+      },
+      "measured_winner": "uzu",
+      "published_m1_winner": "uzu",
+      "uzu_vs_mlx": 1.09,
+      "pub_m1_uza_vs_mlx": 1.24,
+      "uzu_vs_llama": 1.2,
+      "pub_m1_uzu_vs_llama": 1.36
+    },
+    "4B/prefill": {
+      "measured": {
+        "uzu": 386.7,
+        "mlx": 238.8,
+        "llama.cpp": 256.2
+      },
+      "published_m1": {
+        "uzu": 159.6,
+        "mlx": 169.2,
+        "llama.cpp": 196.7
+      },
+      "measured_winner": "uzu",
+      "published_m1_winner": "llama.cpp",
+      "uzu_vs_mlx": 1.62,
+      "pub_m1_uza_vs_mlx": 0.94,
+      "uzu_vs_llama": 1.51,
+      "pub_m1_uzu_vs_llama": 0.81
+    },
+    "4B/decode": {
+      "measured": {
+        "uzu": 43.1,
+        "mlx": 38.5,
+        "llama.cpp": 24.4
+      },
+      "published_m1": {
+        "uzu": 21.2,
+        "mlx": 20.4,
+        "llama.cpp": 18.1
+      },
+      "measured_winner": "uzu",
+      "published_m1_winner": "uzu",
+      "uzu_vs_mlx": 1.12,
+      "pub_m1_uza_vs_mlx": 1.04,
+      "uzu_vs_llama": 1.76,
+      "pub_m1_uzu_vs_llama": 1.17
+    }
+  }
+}
