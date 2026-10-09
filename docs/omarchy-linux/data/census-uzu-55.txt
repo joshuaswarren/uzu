@@ -1,0 +1,74 @@
+files=55 parse_ok=39
+activation/activation.metal                                    OK        
+activation_transform/activation_transform.metal                FAIL(2)   excess elements in scalar initializer
+activation_transform/trellis.metal                             FAIL(3)   excess elements in scalar initializer
+attention/ancestor_attention.metal                             FAIL(10)  unknown type name 'bfloat4'
+attention/attention_fallback.metal                             OK        
+attention/attention_gemm.metal                                 OK        
+attention/attention_prepare.metal                              OK        
+attention/attention_single_pass.metal                          OK        
+attention/attention_two_pass.metal                             OK        
+attention/gemm_grouped/attention_gemm_grouped.metal            OK        
+attention/kv_cache_update.metal                                OK        
+attention/qkv_norm.metal                                       OK        
+attention/sigmoid_gate.metal                                   OK        
+convolution/separable_causal_conv.metal                        FAIL(1)   excess elements in scalar initializer
+embedding/input_embedding_lookup.metal                         OK        
+gated_act_mul/gated_act_mul.metal                              FAIL(2)   excess elements in scalar initializer
+gdn/chunked/a_diag_inv.metal                                   OK        
+gdn/chunked/causal_inv.metal                                   OK        
+gdn/chunked/cumsum.metal                                       OK        
+gdn/chunked/gram.metal                                         OK        
+gdn/chunked/output_and_state.metal                             OK        
+gdn/conv_scan.metal                                            OK        
+gdn/conv_update.metal                                          OK        
+gdn/norm_gate.metal                                            FAIL(2)   expected unqualified-id
+gdn/prefill.metal                                              FAIL(2)   no matching function for call to 'simd_sum'
+gdn/prefill_prep.metal                                         OK        
+gdn/tree_verify/conv_scan.metal                                OK        
+gdn/tree_verify/out.metal                                      OK        
+gdn/tree_verify/prefix.metal                                   OK        
+gdn/tree_verify/state_advance.metal                            FAIL(1)   no matching function for call to 'simd_sum'
+gdn/tree_verify/tree_gram.metal                                OK        
+gdn/tree_verify/tree_update_solve.metal                        OK        
+gdn/update.metal                                               FAIL(2)   expected unqualified-id
+logit_transform/logit_transform.metal                          OK        
+matmul/gemm/gemm.metal                                         OK        
+matmul/gemm/gemm_split_k_reduce.metal                          OK        
+matmul/gemm/gemm_trellis.metal                                 FAIL(2)   use of undeclared identifier 'insert_bits'
+matmul/gemv/gemv.metal                                         FAIL(24)  a type specifier is required for all declarations
+normalization/normalization.metal                              FAIL(2)   expected unqualified-id
+pooling/pooling.metal                                          OK        
+radix_top_k_small.metal                                        FAIL(8)   use of undeclared identifier 'thread_scope_device'; did you mean 'memory_scope_device'?
+sampling/context_ring_update.metal                             OK        
+sampling/repetition_penalty.metal                              OK        
+sampling/unified_sampling.metal                                FAIL(6)   expected unqualified-id
+short_conv/short_conv.metal                                    OK        
+softmax/softmax.metal                                          OK        
+ssm/conv1d.metal                                               OK        
+ssm/split_inproj.metal                                         OK        
+ssm/ssd_prefill.metal                                          OK        
+ssm/ssd_update.metal                                           OK        
+tensor_add_bias/tensor_add_bias.metal                          OK        
+tensor_add_scale/tensor_add_scale.metal                        OK        
+weaver/weaver_frontier_insert_children.metal                   OK        
+weaver/weaver_frontier_select.metal                            FAIL(13)  expected unqualified-id
+weaver/weaver_top_children.metal                               FAIL(3)   expected unqualified-id
+
+error buckets (all errors, normalized):
+   15  use of undeclared identifier 'X'
+   14  expected expression
+    8  unknown type name 'X'
+    7  excess elements in scalar initializer
+    7  expected unqualified-id
+    6  a type specifier is required for all declarations
+    5  no matching function for call to 'X'
+    5  use of undeclared identifier 'X'; did you mean 'X'?
+    3  parameter declarator cannot be qualified
+    3  parameter name cannot have template arguments
+    3  no matching constructor for initialization of 'X'
+    2  subscripted value is not an array, pointer, or vector
+    2  expected 'X'
+    1  no member named 'X' in namespace 'X'
+    1  variable in constant address space must be initialized
+    1  no member named 'X' in 'X'

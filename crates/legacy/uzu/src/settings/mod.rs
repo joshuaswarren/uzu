@@ -175,6 +175,18 @@ fn create_keyring_store() -> Result<Arc<CredentialStore>, SettingsError> {
         })?);
     }
 
+    // Linux: the Secret Service (GNOME Keyring, KWallet, ...) when a session bus provides one, otherwise the kernel keyring.
+    // The kernel keyring is real and needs no daemon, but its keys do not survive a reboot.
+    #[cfg(target_os = "linux")]
+    {
+        if let Ok(store) = zbus_secret_service_keyring_store::Store::new() {
+            return Ok(store);
+        }
+        return Ok(linux_keyutils_keyring_store::Store::new().map_err(|error| SettingsError::BackendError {
+            message: error.to_string(),
+        })?);
+    }
+
     let mock_store = mock::Store::new().map_err(|error| SettingsError::BackendError {
         message: error.to_string(),
     })?;

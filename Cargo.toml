@@ -194,6 +194,8 @@ apple-native-keyring-store = { version = "1.0.0", features = [
     "keychain",
     "protected",
 ] }
+zbus-secret-service-keyring-store = { version = "1.0.1", features = ["rt-async-io-crypto-rust"] }
+linux-keyutils-keyring-store = "1.0.0"
 toml = "1.1.2"
 toml_edit = "0.25.11"
 colored = "3.1.1"

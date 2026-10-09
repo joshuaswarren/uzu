@@ -114,6 +114,10 @@ confy.workspace = true
 keyring-core.workspace = true
 chrono.workspace = true
 
+[target.'cfg(target_os = "linux")'.dependencies]
+zbus-secret-service-keyring-store.workspace = true
+linux-keyutils-keyring-store.workspace = true
+
 [target.'cfg(target_vendor = "apple")'.dependencies]
 objc2.workspace = true
 objc2-foundation.workspace = true
