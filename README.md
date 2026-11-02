@@ -1514,3 +1514,7 @@ If you experience any problems, please contact us via [Discord](https://discord.
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Contributors
+
+Everyone credited so far: [CONTRIBUTORS.md](CONTRIBUTORS.md).
