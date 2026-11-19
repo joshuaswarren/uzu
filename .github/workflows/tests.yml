@@ -23,6 +23,7 @@ jobs:
   linters:
     name: linters
     runs-on: [self-hosted, macos, arm64]
+    timeout-minutes: 45
 
     steps:
       - uses: actions/checkout@v6
@@ -65,6 +66,7 @@ jobs:
   tests:
     name: ${{ matrix.host }}${{ matrix.target && format(' ({0})', matrix.target) }}
     runs-on: ${{ matrix.host == 'linux' && 'uzu-n4std16' || fromJSON('["self-hosted","macos","arm64"]') }}
+    timeout-minutes: 120
 
     strategy:
       matrix:
@@ -119,6 +121,7 @@ jobs:
   validate-bindings:
     name: validate-bindings
     runs-on: [self-hosted, macos, arm64]
+    timeout-minutes: 45
 
     steps:
       - uses: actions/checkout@v6
@@ -153,6 +156,7 @@ jobs:
   linters-mirai-gui:
     name: linters-mirai-gui
     runs-on: [self-hosted, macos, arm64]
+    timeout-minutes: 45
 
     defaults:
       run:
@@ -207,6 +211,7 @@ jobs:
   tests-mirai-gui:
     name: tests-mirai-gui
     runs-on: [self-hosted, macos, arm64]
+    timeout-minutes: 90
 
     defaults:
       run:
@@ -234,6 +239,7 @@ jobs:
   build-mirai-gui:
     name: build-mirai-gui
     runs-on: [self-hosted, macos, arm64]
+    timeout-minutes: 90
 
     defaults:
       run:
@@ -262,6 +268,7 @@ jobs:
   completed:
     name: completed
     runs-on: ubuntu-latest
+    timeout-minutes: 5
     needs: [linters, tests, validate-bindings, linters-mirai-gui, tests-mirai-gui, build-mirai-gui]
     if: ${{ always() }}
 
