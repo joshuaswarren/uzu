@@ -1,10 +1,11 @@
 name: "Tests"
 
+# Disabled on this fork (joshuaswarren/uzu): every job asks for [self-hosted, macos, arm64]
+# or uzu-n4std16, and no such runner serves this fork, so each push and pull request
+# queued seven jobs that sat 24 h and failed with no log (run 44621291156). Manual
+# dispatch only, until a runner with those labels is registered here. The timeout-minutes
+# bounds below cap execution time once a runner exists; they do not bound the queue.
 on:
-  push:
-    branches:
-      - main
-  pull_request:
   workflow_dispatch:
 
 concurrency:
